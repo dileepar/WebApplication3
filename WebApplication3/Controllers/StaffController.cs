@@ -11,11 +11,12 @@ namespace WebApplication3.Controllers
     [EnableCors("http://localhost:4200","*","*")]
     public class StaffController : ApiController
     {
-        public  IHttpActionResult Get(int page, string searchText)
+        public  IHttpActionResult Get(int page, string searchText, 
+            string sortProperty, string sortDirection)
         {
             var service = new StaffService();
 
-            var staff =  service.GetAllStaff(page, searchText);
+            var staff =  service.GetAllStaff(page, searchText, sortProperty, sortDirection);
 
             return Ok(staff);
         }

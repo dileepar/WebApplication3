@@ -20,13 +20,15 @@ namespace WebApplication3.Services
             _dbContext = new ApplicationDbContext();
         }
 
-        public IEnumerable<Staff> GetAllStaff(int page, string searchText)
+        public IEnumerable<Staff> GetAllStaff(int page, string searchText, string sortProperty, string sortDirection)
         {
             var staff = _dbContext.Database.SqlQuery<Staff>
             (
-                "exec dbo.[usp_Staff_Filter] @Page,@Searchtext",
+                "exec dbo.[usp_Staff_Filter] @Page,@Searchtext,@SortProperty,@SortDirection",
                     new SqlParameter("@Page", page),
-                    new SqlParameter("@SearchText", searchText ?? SqlString.Null)
+                    new SqlParameter("@SearchText", searchText ?? SqlString.Null),
+                    new SqlParameter("@SortProperty", sortProperty ?? SqlString.Null),
+                    new SqlParameter("@SortDirection", sortDirection ?? SqlString.Null)
             ).ToList();
 
             return staff;
