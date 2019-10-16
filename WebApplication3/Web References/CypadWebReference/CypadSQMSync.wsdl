@@ -1,0 +1,2898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UserDeviceManagement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserDeviceManagementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserDeviceManagementResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsDeviceNeedsResetting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsDeviceNeedsResettingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsDeviceNeedsResettingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudentTransactionsURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudentTransactionsURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStudentTransactionsURLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMealSelectionURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocationGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMealSelectionURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMealSelectionURLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradingSummaryURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradingSummaryURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradingSummaryURLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeekMenuURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocationGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeekMenuURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeekMenuURLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLastSynchronisedN2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastSynchronised" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Duration" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLastSynchronisedN2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateLastSynchronisedN2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPasswordResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoConfig">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attribute" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoConfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSyncTables">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSyncTablesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSyncTablesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearSyncTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearSyncTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClearSyncTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AckSyncTables">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AckSyncTablesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AckSyncTablesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BlockId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AckTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BlockId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AckTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AckTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadDataZippedN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InsertColumns" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateColumns" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadDataZippedNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadDataZippedNResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadImageRawN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TableId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadImageRawNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadImageRawNResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadImageRaw">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TableId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadImageRawResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadImageRawResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadImageZipped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TableId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadImageZippedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadImageZippedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentZipped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentZippedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentZippedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLinkImageZipped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImageId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLinkImageZippedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLinkImageZippedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStaffImageZipped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImageId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStaffImageZippedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStaffImageZippedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailInspectionReportStandard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailInspectionReportStandardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailInspectionReportStandardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailInspectionReportSSP7">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailInspectionReportSSP7Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailInspectionReportSSP7Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadZippedTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BlockId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadZippedTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadZippedTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Module" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckVersionForUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Module" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckVersionForUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckVersionForUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewMessagesForSite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BlockId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewMessagesForSiteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewMessagesForSiteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="From" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCashSessionTotal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCashSessionTotalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckCashSessionTotalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TotalMealsPreSelected">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocationId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TotalMealsPreSelectedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TotalMealsPreSelectedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttachmentsZipped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReturnColumn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FilterColumn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FilterId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttachmentsZippedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAttachmentsZippedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UserDeviceManagementSoapIn">
+    <wsdl:part name="parameters" element="tns:UserDeviceManagement" />
+  </wsdl:message>
+  <wsdl:message name="UserDeviceManagementSoapOut">
+    <wsdl:part name="parameters" element="tns:UserDeviceManagementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsDeviceNeedsResettingSoapIn">
+    <wsdl:part name="parameters" element="tns:IsDeviceNeedsResetting" />
+  </wsdl:message>
+  <wsdl:message name="IsDeviceNeedsResettingSoapOut">
+    <wsdl:part name="parameters" element="tns:IsDeviceNeedsResettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentTransactionsURLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStudentTransactionsURL" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentTransactionsURLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStudentTransactionsURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMealSelectionURLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMealSelectionURL" />
+  </wsdl:message>
+  <wsdl:message name="GetMealSelectionURLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMealSelectionURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradingSummaryURLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTradingSummaryURL" />
+  </wsdl:message>
+  <wsdl:message name="GetTradingSummaryURLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradingSummaryURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeekMenuURLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeekMenuURL" />
+  </wsdl:message>
+  <wsdl:message name="GetWeekMenuURLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeekMenuURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastSynchronisedN2SoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateLastSynchronisedN2" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastSynchronisedN2SoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateLastSynchronisedN2Response" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPassword" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoConfig" />
+  </wsdl:message>
+  <wsdl:message name="AutoConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSyncTablesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSyncTables" />
+  </wsdl:message>
+  <wsdl:message name="GetSyncTablesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSyncTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearSyncTableSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearSyncTable" />
+  </wsdl:message>
+  <wsdl:message name="ClearSyncTableSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearSyncTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="AckSyncTablesSoapIn">
+    <wsdl:part name="parameters" element="tns:AckSyncTables" />
+  </wsdl:message>
+  <wsdl:message name="AckSyncTablesSoapOut">
+    <wsdl:part name="parameters" element="tns:AckSyncTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadTableSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadTable" />
+  </wsdl:message>
+  <wsdl:message name="DownloadTableSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="AckTableSoapIn">
+    <wsdl:part name="parameters" element="tns:AckTable" />
+  </wsdl:message>
+  <wsdl:message name="AckTableSoapOut">
+    <wsdl:part name="parameters" element="tns:AckTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadDataZippedNSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadDataZippedN" />
+  </wsdl:message>
+  <wsdl:message name="UploadDataZippedNSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadDataZippedNResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawNSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadImageRawN" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawNSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadImageRawNResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadImageRaw" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadImageRawResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageZippedSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadImageZipped" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageZippedSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadImageZippedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentZippedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentZipped" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentZippedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentZippedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLinkImageZippedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLinkImageZipped" />
+  </wsdl:message>
+  <wsdl:message name="GetLinkImageZippedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLinkImageZippedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStaffImageZippedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStaffImageZipped" />
+  </wsdl:message>
+  <wsdl:message name="GetStaffImageZippedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStaffImageZippedResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportStandardSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailInspectionReportStandard" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportStandardSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailInspectionReportStandardResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportSSP7SoapIn">
+    <wsdl:part name="parameters" element="tns:EmailInspectionReportSSP7" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportSSP7SoapOut">
+    <wsdl:part name="parameters" element="tns:EmailInspectionReportSSP7Response" />
+  </wsdl:message>
+  <wsdl:message name="DownloadZippedTableSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadZippedTable" />
+  </wsdl:message>
+  <wsdl:message name="DownloadZippedTableSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadZippedTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckVersion" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionForUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckVersionForUser" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionForUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckVersionForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMessagesForSiteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewMessagesForSite" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMessagesForSiteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewMessagesForSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckCashSessionTotalSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckCashSessionTotal" />
+  </wsdl:message>
+  <wsdl:message name="CheckCashSessionTotalSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckCashSessionTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="TotalMealsPreSelectedSoapIn">
+    <wsdl:part name="parameters" element="tns:TotalMealsPreSelected" />
+  </wsdl:message>
+  <wsdl:message name="TotalMealsPreSelectedSoapOut">
+    <wsdl:part name="parameters" element="tns:TotalMealsPreSelectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachmentsZippedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAttachmentsZipped" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachmentsZippedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAttachmentsZippedResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserDeviceManagementHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="DataString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserDeviceManagementHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="IsDeviceNeedsResettingHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsDeviceNeedsResettingHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentTransactionsURLHttpGetIn">
+    <wsdl:part name="StudentGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentTransactionsURLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMealSelectionURLHttpGetIn">
+    <wsdl:part name="LocationGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMealSelectionURLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTradingSummaryURLHttpGetIn">
+    <wsdl:part name="UserGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTradingSummaryURLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWeekMenuURLHttpGetIn">
+    <wsdl:part name="LocationGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWeekMenuURLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastSynchronisedN2HttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="LastSynchronised" type="s:string" />
+    <wsdl:part name="Usage" type="s:string" />
+    <wsdl:part name="Version" type="s:string" />
+    <wsdl:part name="Duration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastSynchronisedN2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="NewPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateHttpGetIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AutoConfigHttpGetIn">
+    <wsdl:part name="Client" type="s:string" />
+    <wsdl:part name="Attribute" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoConfigHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSyncTablesHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSyncTablesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ClearSyncTableHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="TableName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ClearSyncTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AckSyncTablesHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AckSyncTablesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadTableHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="BlockId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AckTableHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="BlockId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AckTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadDataZippedNHttpGetIn">
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="InsertColumns" type="s:string" />
+    <wsdl:part name="UpdateColumns" type="s:string" />
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadDataZippedNHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawNHttpGetIn">
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="ImageData" type="s1:StringArray" />
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawNHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawHttpGetIn">
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="ImageData" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageZippedHttpGetIn">
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="ImageData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageZippedHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentZippedHttpGetIn">
+    <wsdl:part name="DocumentId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentZippedHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLinkImageZippedHttpGetIn">
+    <wsdl:part name="ImageId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLinkImageZippedHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStaffImageZippedHttpGetIn">
+    <wsdl:part name="ImageId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStaffImageZippedHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportStandardHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportStandardHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportSSP7HttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportSSP7HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadZippedTableHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="BlockId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadZippedTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionHttpGetIn">
+    <wsdl:part name="Module" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionForUserHttpGetIn">
+    <wsdl:part name="Module" type="s:string" />
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionForUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMessagesForSiteHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="BlockId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMessagesForSiteHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetIn">
+    <wsdl:part name="From" type="s:string" />
+    <wsdl:part name="To" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="Body" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckCashSessionTotalHttpGetIn">
+    <wsdl:part name="RecordId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckCashSessionTotalHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TotalMealsPreSelectedHttpGetIn">
+    <wsdl:part name="LocationId" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TotalMealsPreSelectedHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachmentsZippedHttpGetIn">
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="ReturnColumn" type="s:string" />
+    <wsdl:part name="FilterColumn" type="s:string" />
+    <wsdl:part name="FilterId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachmentsZippedHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UserDeviceManagementHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="DataString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserDeviceManagementHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="IsDeviceNeedsResettingHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsDeviceNeedsResettingHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentTransactionsURLHttpPostIn">
+    <wsdl:part name="StudentGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentTransactionsURLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMealSelectionURLHttpPostIn">
+    <wsdl:part name="LocationGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMealSelectionURLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTradingSummaryURLHttpPostIn">
+    <wsdl:part name="UserGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTradingSummaryURLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWeekMenuURLHttpPostIn">
+    <wsdl:part name="LocationGuid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWeekMenuURLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastSynchronisedN2HttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="LastSynchronised" type="s:string" />
+    <wsdl:part name="Usage" type="s:string" />
+    <wsdl:part name="Version" type="s:string" />
+    <wsdl:part name="Duration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastSynchronisedN2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="NewPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateHttpPostIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AutoConfigHttpPostIn">
+    <wsdl:part name="Client" type="s:string" />
+    <wsdl:part name="Attribute" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoConfigHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSyncTablesHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSyncTablesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ClearSyncTableHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="TableName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ClearSyncTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AckSyncTablesHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AckSyncTablesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadTableHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="BlockId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AckTableHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="BlockId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AckTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadDataZippedNHttpPostIn">
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="InsertColumns" type="s:string" />
+    <wsdl:part name="UpdateColumns" type="s:string" />
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadDataZippedNHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawNHttpPostIn">
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="ImageData" type="s1:StringArray" />
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawNHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawHttpPostIn">
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="ImageData" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageRawHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageZippedHttpPostIn">
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="ImageData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageZippedHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentZippedHttpPostIn">
+    <wsdl:part name="DocumentId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentZippedHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLinkImageZippedHttpPostIn">
+    <wsdl:part name="ImageId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLinkImageZippedHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStaffImageZippedHttpPostIn">
+    <wsdl:part name="ImageId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStaffImageZippedHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportStandardHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportStandardHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportSSP7HttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailInspectionReportSSP7HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadZippedTableHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="TableId" type="s:string" />
+    <wsdl:part name="BlockId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadZippedTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionHttpPostIn">
+    <wsdl:part name="Module" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionForUserHttpPostIn">
+    <wsdl:part name="Module" type="s:string" />
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionForUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMessagesForSiteHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="DeviceId" type="s:string" />
+    <wsdl:part name="BlockId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMessagesForSiteHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostIn">
+    <wsdl:part name="From" type="s:string" />
+    <wsdl:part name="To" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="Body" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckCashSessionTotalHttpPostIn">
+    <wsdl:part name="RecordId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckCashSessionTotalHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TotalMealsPreSelectedHttpPostIn">
+    <wsdl:part name="LocationId" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TotalMealsPreSelectedHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachmentsZippedHttpPostIn">
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="ReturnColumn" type="s:string" />
+    <wsdl:part name="FilterColumn" type="s:string" />
+    <wsdl:part name="FilterId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachmentsZippedHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="CypadSQMSyncSoap">
+    <wsdl:operation name="UserDeviceManagement">
+      <wsdl:input message="tns:UserDeviceManagementSoapIn" />
+      <wsdl:output message="tns:UserDeviceManagementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsDeviceNeedsResetting">
+      <wsdl:input message="tns:IsDeviceNeedsResettingSoapIn" />
+      <wsdl:output message="tns:IsDeviceNeedsResettingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentTransactionsURL">
+      <wsdl:input message="tns:GetStudentTransactionsURLSoapIn" />
+      <wsdl:output message="tns:GetStudentTransactionsURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMealSelectionURL">
+      <wsdl:input message="tns:GetMealSelectionURLSoapIn" />
+      <wsdl:output message="tns:GetMealSelectionURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingSummaryURL">
+      <wsdl:input message="tns:GetTradingSummaryURLSoapIn" />
+      <wsdl:output message="tns:GetTradingSummaryURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekMenuURL">
+      <wsdl:input message="tns:GetWeekMenuURLSoapIn" />
+      <wsdl:output message="tns:GetWeekMenuURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastSynchronisedN2">
+      <wsdl:input message="tns:UpdateLastSynchronisedN2SoapIn" />
+      <wsdl:output message="tns:UpdateLastSynchronisedN2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <wsdl:input message="tns:GetPasswordSoapIn" />
+      <wsdl:output message="tns:GetPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input message="tns:AuthenticateSoapIn" />
+      <wsdl:output message="tns:AuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoConfig">
+      <wsdl:input message="tns:AutoConfigSoapIn" />
+      <wsdl:output message="tns:AutoConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSyncTables">
+      <wsdl:input message="tns:GetSyncTablesSoapIn" />
+      <wsdl:output message="tns:GetSyncTablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearSyncTable">
+      <wsdl:input message="tns:ClearSyncTableSoapIn" />
+      <wsdl:output message="tns:ClearSyncTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AckSyncTables">
+      <wsdl:input message="tns:AckSyncTablesSoapIn" />
+      <wsdl:output message="tns:AckSyncTablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadTable">
+      <wsdl:input message="tns:DownloadTableSoapIn" />
+      <wsdl:output message="tns:DownloadTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AckTable">
+      <wsdl:input message="tns:AckTableSoapIn" />
+      <wsdl:output message="tns:AckTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDataZippedN">
+      <wsdl:input message="tns:UploadDataZippedNSoapIn" />
+      <wsdl:output message="tns:UploadDataZippedNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRawN">
+      <wsdl:input message="tns:UploadImageRawNSoapIn" />
+      <wsdl:output message="tns:UploadImageRawNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRaw">
+      <wsdl:input message="tns:UploadImageRawSoapIn" />
+      <wsdl:output message="tns:UploadImageRawSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageZipped">
+      <wsdl:input message="tns:UploadImageZippedSoapIn" />
+      <wsdl:output message="tns:UploadImageZippedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentZipped">
+      <wsdl:input message="tns:GetDocumentZippedSoapIn" />
+      <wsdl:output message="tns:GetDocumentZippedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLinkImageZipped">
+      <wsdl:input message="tns:GetLinkImageZippedSoapIn" />
+      <wsdl:output message="tns:GetLinkImageZippedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffImageZipped">
+      <wsdl:input message="tns:GetStaffImageZippedSoapIn" />
+      <wsdl:output message="tns:GetStaffImageZippedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportStandard">
+      <wsdl:input message="tns:EmailInspectionReportStandardSoapIn" />
+      <wsdl:output message="tns:EmailInspectionReportStandardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportSSP7">
+      <wsdl:input message="tns:EmailInspectionReportSSP7SoapIn" />
+      <wsdl:output message="tns:EmailInspectionReportSSP7SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadZippedTable">
+      <wsdl:input message="tns:DownloadZippedTableSoapIn" />
+      <wsdl:output message="tns:DownloadZippedTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <wsdl:input message="tns:CheckVersionSoapIn" />
+      <wsdl:output message="tns:CheckVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersionForUser">
+      <wsdl:input message="tns:CheckVersionForUserSoapIn" />
+      <wsdl:output message="tns:CheckVersionForUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMessagesForSite">
+      <wsdl:input message="tns:GetNewMessagesForSiteSoapIn" />
+      <wsdl:output message="tns:GetNewMessagesForSiteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailSoapIn" />
+      <wsdl:output message="tns:SendEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCashSessionTotal">
+      <wsdl:input message="tns:CheckCashSessionTotalSoapIn" />
+      <wsdl:output message="tns:CheckCashSessionTotalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalMealsPreSelected">
+      <wsdl:input message="tns:TotalMealsPreSelectedSoapIn" />
+      <wsdl:output message="tns:TotalMealsPreSelectedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachmentsZipped">
+      <wsdl:input message="tns:GetAttachmentsZippedSoapIn" />
+      <wsdl:output message="tns:GetAttachmentsZippedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CypadSQMSyncHttpGet">
+    <wsdl:operation name="UserDeviceManagement">
+      <wsdl:input message="tns:UserDeviceManagementHttpGetIn" />
+      <wsdl:output message="tns:UserDeviceManagementHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsDeviceNeedsResetting">
+      <wsdl:input message="tns:IsDeviceNeedsResettingHttpGetIn" />
+      <wsdl:output message="tns:IsDeviceNeedsResettingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentTransactionsURL">
+      <wsdl:input message="tns:GetStudentTransactionsURLHttpGetIn" />
+      <wsdl:output message="tns:GetStudentTransactionsURLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMealSelectionURL">
+      <wsdl:input message="tns:GetMealSelectionURLHttpGetIn" />
+      <wsdl:output message="tns:GetMealSelectionURLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingSummaryURL">
+      <wsdl:input message="tns:GetTradingSummaryURLHttpGetIn" />
+      <wsdl:output message="tns:GetTradingSummaryURLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekMenuURL">
+      <wsdl:input message="tns:GetWeekMenuURLHttpGetIn" />
+      <wsdl:output message="tns:GetWeekMenuURLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastSynchronisedN2">
+      <wsdl:input message="tns:UpdateLastSynchronisedN2HttpGetIn" />
+      <wsdl:output message="tns:UpdateLastSynchronisedN2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordHttpGetIn" />
+      <wsdl:output message="tns:ChangePasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <wsdl:input message="tns:GetPasswordHttpGetIn" />
+      <wsdl:output message="tns:GetPasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input message="tns:AuthenticateHttpGetIn" />
+      <wsdl:output message="tns:AuthenticateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoConfig">
+      <wsdl:input message="tns:AutoConfigHttpGetIn" />
+      <wsdl:output message="tns:AutoConfigHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSyncTables">
+      <wsdl:input message="tns:GetSyncTablesHttpGetIn" />
+      <wsdl:output message="tns:GetSyncTablesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearSyncTable">
+      <wsdl:input message="tns:ClearSyncTableHttpGetIn" />
+      <wsdl:output message="tns:ClearSyncTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AckSyncTables">
+      <wsdl:input message="tns:AckSyncTablesHttpGetIn" />
+      <wsdl:output message="tns:AckSyncTablesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadTable">
+      <wsdl:input message="tns:DownloadTableHttpGetIn" />
+      <wsdl:output message="tns:DownloadTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AckTable">
+      <wsdl:input message="tns:AckTableHttpGetIn" />
+      <wsdl:output message="tns:AckTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDataZippedN">
+      <wsdl:input message="tns:UploadDataZippedNHttpGetIn" />
+      <wsdl:output message="tns:UploadDataZippedNHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRawN">
+      <wsdl:input message="tns:UploadImageRawNHttpGetIn" />
+      <wsdl:output message="tns:UploadImageRawNHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRaw">
+      <wsdl:input message="tns:UploadImageRawHttpGetIn" />
+      <wsdl:output message="tns:UploadImageRawHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageZipped">
+      <wsdl:input message="tns:UploadImageZippedHttpGetIn" />
+      <wsdl:output message="tns:UploadImageZippedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentZipped">
+      <wsdl:input message="tns:GetDocumentZippedHttpGetIn" />
+      <wsdl:output message="tns:GetDocumentZippedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLinkImageZipped">
+      <wsdl:input message="tns:GetLinkImageZippedHttpGetIn" />
+      <wsdl:output message="tns:GetLinkImageZippedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffImageZipped">
+      <wsdl:input message="tns:GetStaffImageZippedHttpGetIn" />
+      <wsdl:output message="tns:GetStaffImageZippedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportStandard">
+      <wsdl:input message="tns:EmailInspectionReportStandardHttpGetIn" />
+      <wsdl:output message="tns:EmailInspectionReportStandardHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportSSP7">
+      <wsdl:input message="tns:EmailInspectionReportSSP7HttpGetIn" />
+      <wsdl:output message="tns:EmailInspectionReportSSP7HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadZippedTable">
+      <wsdl:input message="tns:DownloadZippedTableHttpGetIn" />
+      <wsdl:output message="tns:DownloadZippedTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <wsdl:input message="tns:CheckVersionHttpGetIn" />
+      <wsdl:output message="tns:CheckVersionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersionForUser">
+      <wsdl:input message="tns:CheckVersionForUserHttpGetIn" />
+      <wsdl:output message="tns:CheckVersionForUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMessagesForSite">
+      <wsdl:input message="tns:GetNewMessagesForSiteHttpGetIn" />
+      <wsdl:output message="tns:GetNewMessagesForSiteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpGetIn" />
+      <wsdl:output message="tns:SendEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCashSessionTotal">
+      <wsdl:input message="tns:CheckCashSessionTotalHttpGetIn" />
+      <wsdl:output message="tns:CheckCashSessionTotalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalMealsPreSelected">
+      <wsdl:input message="tns:TotalMealsPreSelectedHttpGetIn" />
+      <wsdl:output message="tns:TotalMealsPreSelectedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachmentsZipped">
+      <wsdl:input message="tns:GetAttachmentsZippedHttpGetIn" />
+      <wsdl:output message="tns:GetAttachmentsZippedHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CypadSQMSyncHttpPost">
+    <wsdl:operation name="UserDeviceManagement">
+      <wsdl:input message="tns:UserDeviceManagementHttpPostIn" />
+      <wsdl:output message="tns:UserDeviceManagementHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsDeviceNeedsResetting">
+      <wsdl:input message="tns:IsDeviceNeedsResettingHttpPostIn" />
+      <wsdl:output message="tns:IsDeviceNeedsResettingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentTransactionsURL">
+      <wsdl:input message="tns:GetStudentTransactionsURLHttpPostIn" />
+      <wsdl:output message="tns:GetStudentTransactionsURLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMealSelectionURL">
+      <wsdl:input message="tns:GetMealSelectionURLHttpPostIn" />
+      <wsdl:output message="tns:GetMealSelectionURLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingSummaryURL">
+      <wsdl:input message="tns:GetTradingSummaryURLHttpPostIn" />
+      <wsdl:output message="tns:GetTradingSummaryURLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekMenuURL">
+      <wsdl:input message="tns:GetWeekMenuURLHttpPostIn" />
+      <wsdl:output message="tns:GetWeekMenuURLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastSynchronisedN2">
+      <wsdl:input message="tns:UpdateLastSynchronisedN2HttpPostIn" />
+      <wsdl:output message="tns:UpdateLastSynchronisedN2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordHttpPostIn" />
+      <wsdl:output message="tns:ChangePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <wsdl:input message="tns:GetPasswordHttpPostIn" />
+      <wsdl:output message="tns:GetPasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input message="tns:AuthenticateHttpPostIn" />
+      <wsdl:output message="tns:AuthenticateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoConfig">
+      <wsdl:input message="tns:AutoConfigHttpPostIn" />
+      <wsdl:output message="tns:AutoConfigHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSyncTables">
+      <wsdl:input message="tns:GetSyncTablesHttpPostIn" />
+      <wsdl:output message="tns:GetSyncTablesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearSyncTable">
+      <wsdl:input message="tns:ClearSyncTableHttpPostIn" />
+      <wsdl:output message="tns:ClearSyncTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AckSyncTables">
+      <wsdl:input message="tns:AckSyncTablesHttpPostIn" />
+      <wsdl:output message="tns:AckSyncTablesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadTable">
+      <wsdl:input message="tns:DownloadTableHttpPostIn" />
+      <wsdl:output message="tns:DownloadTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AckTable">
+      <wsdl:input message="tns:AckTableHttpPostIn" />
+      <wsdl:output message="tns:AckTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDataZippedN">
+      <wsdl:input message="tns:UploadDataZippedNHttpPostIn" />
+      <wsdl:output message="tns:UploadDataZippedNHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRawN">
+      <wsdl:input message="tns:UploadImageRawNHttpPostIn" />
+      <wsdl:output message="tns:UploadImageRawNHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRaw">
+      <wsdl:input message="tns:UploadImageRawHttpPostIn" />
+      <wsdl:output message="tns:UploadImageRawHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageZipped">
+      <wsdl:input message="tns:UploadImageZippedHttpPostIn" />
+      <wsdl:output message="tns:UploadImageZippedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentZipped">
+      <wsdl:input message="tns:GetDocumentZippedHttpPostIn" />
+      <wsdl:output message="tns:GetDocumentZippedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLinkImageZipped">
+      <wsdl:input message="tns:GetLinkImageZippedHttpPostIn" />
+      <wsdl:output message="tns:GetLinkImageZippedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffImageZipped">
+      <wsdl:input message="tns:GetStaffImageZippedHttpPostIn" />
+      <wsdl:output message="tns:GetStaffImageZippedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportStandard">
+      <wsdl:input message="tns:EmailInspectionReportStandardHttpPostIn" />
+      <wsdl:output message="tns:EmailInspectionReportStandardHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportSSP7">
+      <wsdl:input message="tns:EmailInspectionReportSSP7HttpPostIn" />
+      <wsdl:output message="tns:EmailInspectionReportSSP7HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadZippedTable">
+      <wsdl:input message="tns:DownloadZippedTableHttpPostIn" />
+      <wsdl:output message="tns:DownloadZippedTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <wsdl:input message="tns:CheckVersionHttpPostIn" />
+      <wsdl:output message="tns:CheckVersionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersionForUser">
+      <wsdl:input message="tns:CheckVersionForUserHttpPostIn" />
+      <wsdl:output message="tns:CheckVersionForUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMessagesForSite">
+      <wsdl:input message="tns:GetNewMessagesForSiteHttpPostIn" />
+      <wsdl:output message="tns:GetNewMessagesForSiteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpPostIn" />
+      <wsdl:output message="tns:SendEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCashSessionTotal">
+      <wsdl:input message="tns:CheckCashSessionTotalHttpPostIn" />
+      <wsdl:output message="tns:CheckCashSessionTotalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalMealsPreSelected">
+      <wsdl:input message="tns:TotalMealsPreSelectedHttpPostIn" />
+      <wsdl:output message="tns:TotalMealsPreSelectedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachmentsZipped">
+      <wsdl:input message="tns:GetAttachmentsZippedHttpPostIn" />
+      <wsdl:output message="tns:GetAttachmentsZippedHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CypadSQMSyncSoap" type="tns:CypadSQMSyncSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserDeviceManagement">
+      <soap:operation soapAction="http://tempuri.org/UserDeviceManagement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsDeviceNeedsResetting">
+      <soap:operation soapAction="http://tempuri.org/IsDeviceNeedsResetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentTransactionsURL">
+      <soap:operation soapAction="http://tempuri.org/GetStudentTransactionsURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMealSelectionURL">
+      <soap:operation soapAction="http://tempuri.org/GetMealSelectionURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingSummaryURL">
+      <soap:operation soapAction="http://tempuri.org/GetTradingSummaryURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekMenuURL">
+      <soap:operation soapAction="http://tempuri.org/GetWeekMenuURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastSynchronisedN2">
+      <soap:operation soapAction="http://tempuri.org/UpdateLastSynchronisedN2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <soap:operation soapAction="http://tempuri.org/GetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://tempuri.org/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoConfig">
+      <soap:operation soapAction="http://tempuri.org/AutoConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSyncTables">
+      <soap:operation soapAction="http://tempuri.org/GetSyncTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearSyncTable">
+      <soap:operation soapAction="http://tempuri.org/ClearSyncTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AckSyncTables">
+      <soap:operation soapAction="http://tempuri.org/AckSyncTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadTable">
+      <soap:operation soapAction="http://tempuri.org/DownloadTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AckTable">
+      <soap:operation soapAction="http://tempuri.org/AckTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDataZippedN">
+      <soap:operation soapAction="http://tempuri.org/UploadDataZippedN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRawN">
+      <soap:operation soapAction="http://tempuri.org/UploadImageRawN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRaw">
+      <soap:operation soapAction="http://tempuri.org/UploadImageRaw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageZipped">
+      <soap:operation soapAction="http://tempuri.org/UploadImageZipped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentZipped">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentZipped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinkImageZipped">
+      <soap:operation soapAction="http://tempuri.org/GetLinkImageZipped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffImageZipped">
+      <soap:operation soapAction="http://tempuri.org/GetStaffImageZipped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportStandard">
+      <soap:operation soapAction="http://tempuri.org/EmailInspectionReportStandard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportSSP7">
+      <soap:operation soapAction="http://tempuri.org/EmailInspectionReportSSP7" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadZippedTable">
+      <soap:operation soapAction="http://tempuri.org/DownloadZippedTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <soap:operation soapAction="http://tempuri.org/CheckVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersionForUser">
+      <soap:operation soapAction="http://tempuri.org/CheckVersionForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMessagesForSite">
+      <soap:operation soapAction="http://tempuri.org/GetNewMessagesForSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCashSessionTotal">
+      <soap:operation soapAction="http://tempuri.org/CheckCashSessionTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalMealsPreSelected">
+      <soap:operation soapAction="http://tempuri.org/TotalMealsPreSelected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachmentsZipped">
+      <soap:operation soapAction="http://tempuri.org/GetAttachmentsZipped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CypadSQMSyncSoap12" type="tns:CypadSQMSyncSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserDeviceManagement">
+      <soap12:operation soapAction="http://tempuri.org/UserDeviceManagement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsDeviceNeedsResetting">
+      <soap12:operation soapAction="http://tempuri.org/IsDeviceNeedsResetting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentTransactionsURL">
+      <soap12:operation soapAction="http://tempuri.org/GetStudentTransactionsURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMealSelectionURL">
+      <soap12:operation soapAction="http://tempuri.org/GetMealSelectionURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingSummaryURL">
+      <soap12:operation soapAction="http://tempuri.org/GetTradingSummaryURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekMenuURL">
+      <soap12:operation soapAction="http://tempuri.org/GetWeekMenuURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastSynchronisedN2">
+      <soap12:operation soapAction="http://tempuri.org/UpdateLastSynchronisedN2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <soap12:operation soapAction="http://tempuri.org/GetPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap12:operation soapAction="http://tempuri.org/Authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoConfig">
+      <soap12:operation soapAction="http://tempuri.org/AutoConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSyncTables">
+      <soap12:operation soapAction="http://tempuri.org/GetSyncTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearSyncTable">
+      <soap12:operation soapAction="http://tempuri.org/ClearSyncTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AckSyncTables">
+      <soap12:operation soapAction="http://tempuri.org/AckSyncTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadTable">
+      <soap12:operation soapAction="http://tempuri.org/DownloadTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AckTable">
+      <soap12:operation soapAction="http://tempuri.org/AckTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDataZippedN">
+      <soap12:operation soapAction="http://tempuri.org/UploadDataZippedN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRawN">
+      <soap12:operation soapAction="http://tempuri.org/UploadImageRawN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRaw">
+      <soap12:operation soapAction="http://tempuri.org/UploadImageRaw" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageZipped">
+      <soap12:operation soapAction="http://tempuri.org/UploadImageZipped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentZipped">
+      <soap12:operation soapAction="http://tempuri.org/GetDocumentZipped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinkImageZipped">
+      <soap12:operation soapAction="http://tempuri.org/GetLinkImageZipped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffImageZipped">
+      <soap12:operation soapAction="http://tempuri.org/GetStaffImageZipped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportStandard">
+      <soap12:operation soapAction="http://tempuri.org/EmailInspectionReportStandard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportSSP7">
+      <soap12:operation soapAction="http://tempuri.org/EmailInspectionReportSSP7" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadZippedTable">
+      <soap12:operation soapAction="http://tempuri.org/DownloadZippedTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <soap12:operation soapAction="http://tempuri.org/CheckVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersionForUser">
+      <soap12:operation soapAction="http://tempuri.org/CheckVersionForUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMessagesForSite">
+      <soap12:operation soapAction="http://tempuri.org/GetNewMessagesForSite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCashSessionTotal">
+      <soap12:operation soapAction="http://tempuri.org/CheckCashSessionTotal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalMealsPreSelected">
+      <soap12:operation soapAction="http://tempuri.org/TotalMealsPreSelected" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachmentsZipped">
+      <soap12:operation soapAction="http://tempuri.org/GetAttachmentsZipped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CypadSQMSyncHttpGet" type="tns:CypadSQMSyncHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="UserDeviceManagement">
+      <http:operation location="/UserDeviceManagement" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsDeviceNeedsResetting">
+      <http:operation location="/IsDeviceNeedsResetting" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentTransactionsURL">
+      <http:operation location="/GetStudentTransactionsURL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMealSelectionURL">
+      <http:operation location="/GetMealSelectionURL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingSummaryURL">
+      <http:operation location="/GetTradingSummaryURL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekMenuURL">
+      <http:operation location="/GetWeekMenuURL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastSynchronisedN2">
+      <http:operation location="/UpdateLastSynchronisedN2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <http:operation location="/GetPassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <http:operation location="/Authenticate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoConfig">
+      <http:operation location="/AutoConfig" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSyncTables">
+      <http:operation location="/GetSyncTables" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearSyncTable">
+      <http:operation location="/ClearSyncTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AckSyncTables">
+      <http:operation location="/AckSyncTables" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadTable">
+      <http:operation location="/DownloadTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AckTable">
+      <http:operation location="/AckTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDataZippedN">
+      <http:operation location="/UploadDataZippedN" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRawN">
+      <http:operation location="/UploadImageRawN" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRaw">
+      <http:operation location="/UploadImageRaw" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageZipped">
+      <http:operation location="/UploadImageZipped" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentZipped">
+      <http:operation location="/GetDocumentZipped" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinkImageZipped">
+      <http:operation location="/GetLinkImageZipped" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffImageZipped">
+      <http:operation location="/GetStaffImageZipped" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportStandard">
+      <http:operation location="/EmailInspectionReportStandard" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportSSP7">
+      <http:operation location="/EmailInspectionReportSSP7" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadZippedTable">
+      <http:operation location="/DownloadZippedTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <http:operation location="/CheckVersion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersionForUser">
+      <http:operation location="/CheckVersionForUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMessagesForSite">
+      <http:operation location="/GetNewMessagesForSite" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCashSessionTotal">
+      <http:operation location="/CheckCashSessionTotal" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalMealsPreSelected">
+      <http:operation location="/TotalMealsPreSelected" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachmentsZipped">
+      <http:operation location="/GetAttachmentsZipped" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CypadSQMSyncHttpPost" type="tns:CypadSQMSyncHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="UserDeviceManagement">
+      <http:operation location="/UserDeviceManagement" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsDeviceNeedsResetting">
+      <http:operation location="/IsDeviceNeedsResetting" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentTransactionsURL">
+      <http:operation location="/GetStudentTransactionsURL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMealSelectionURL">
+      <http:operation location="/GetMealSelectionURL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingSummaryURL">
+      <http:operation location="/GetTradingSummaryURL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekMenuURL">
+      <http:operation location="/GetWeekMenuURL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastSynchronisedN2">
+      <http:operation location="/UpdateLastSynchronisedN2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <http:operation location="/GetPassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <http:operation location="/Authenticate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoConfig">
+      <http:operation location="/AutoConfig" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSyncTables">
+      <http:operation location="/GetSyncTables" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearSyncTable">
+      <http:operation location="/ClearSyncTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AckSyncTables">
+      <http:operation location="/AckSyncTables" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadTable">
+      <http:operation location="/DownloadTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AckTable">
+      <http:operation location="/AckTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDataZippedN">
+      <http:operation location="/UploadDataZippedN" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRawN">
+      <http:operation location="/UploadImageRawN" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageRaw">
+      <http:operation location="/UploadImageRaw" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImageZipped">
+      <http:operation location="/UploadImageZipped" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentZipped">
+      <http:operation location="/GetDocumentZipped" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinkImageZipped">
+      <http:operation location="/GetLinkImageZipped" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffImageZipped">
+      <http:operation location="/GetStaffImageZipped" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportStandard">
+      <http:operation location="/EmailInspectionReportStandard" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailInspectionReportSSP7">
+      <http:operation location="/EmailInspectionReportSSP7" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadZippedTable">
+      <http:operation location="/DownloadZippedTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <http:operation location="/CheckVersion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersionForUser">
+      <http:operation location="/CheckVersionForUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMessagesForSite">
+      <http:operation location="/GetNewMessagesForSite" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCashSessionTotal">
+      <http:operation location="/CheckCashSessionTotal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalMealsPreSelected">
+      <http:operation location="/TotalMealsPreSelected" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachmentsZipped">
+      <http:operation location="/GetAttachmentsZipped" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CypadSQMSync">
+    <wsdl:port name="CypadSQMSyncSoap" binding="tns:CypadSQMSyncSoap">
+      <soap:address location="http://office.cypad.net/cypadsqm_android4_4_Dev/webservices/CypadSQMSync.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CypadSQMSyncSoap12" binding="tns:CypadSQMSyncSoap12">
+      <soap12:address location="http://office.cypad.net/cypadsqm_android4_4_Dev/webservices/CypadSQMSync.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CypadSQMSyncHttpGet" binding="tns:CypadSQMSyncHttpGet">
+      <http:address location="http://office.cypad.net/cypadsqm_android4_4_Dev/webservices/CypadSQMSync.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CypadSQMSyncHttpPost" binding="tns:CypadSQMSyncHttpPost">
+      <http:address location="http://office.cypad.net/cypadsqm_android4_4_Dev/webservices/CypadSQMSync.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
